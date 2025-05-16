@@ -59,13 +59,13 @@ export default function Footer() {
           <h3 className="text-xl font-semibold accent-primary mb-4 font-heading">
             Contact Us
           </h3>
-          <p className="text-sm">Feltham, Middlesex</p>
+          <p className="text-sm">London, UK</p>
           <p className="text-sm">
             <a
-              href="tel:07811186139"
+              href="tel:01234567890"
               className="text-secondary hover:text-secondary/80 hover:scale-110 transition-all duration-200 font-heading"
             >
-              07811 186 139
+              01234 567 890
             </a>
           </p>
           <p className="text-sm">
@@ -102,7 +102,6 @@ export default function Footer() {
         <p className="text-sm">
           &copy; {new Date().getFullYear()} BollyGroove. All rights reserved.
         </p>
-        <p className="text-xs mt-1">Designed with WordPress (Inspired by)</p>
       </div>
     </footer>
   );
