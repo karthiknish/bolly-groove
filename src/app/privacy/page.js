@@ -44,6 +44,7 @@ export default function PrivacyPage() {
               participate in various activities related to the Site, such as
               online chat and message boards.
             </li>
+            <br />
             <li>
               <strong>Derivative Data:</strong> Information our servers
               automatically collect when you access the Site, such as your IP
@@ -88,11 +89,6 @@ export default function PrivacyPage() {
             If you have questions or comments about this Privacy Policy, please
             contact us at our contact email address or via the contact form on
             our website.
-          </p>
-          <p className="text-sm text-center text-muted-foreground">
-            This is a template Privacy Policy and should be reviewed and
-            customized by a legal professional to ensure it meets all legal
-            requirements for your specific situation and jurisdiction.
           </p>
         </div>
       </div>
