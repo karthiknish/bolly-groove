@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BollyGroove
+
+A modern, vibrant Bollywood events website built with Next.js, Tailwind CSS, shadcn/ui, and Framer Motion.
+
+## Features
+
+- **Brand Colors:** Uses #A301F8 (primary) and #FEE89F (secondary) throughout, with lively hover and scale animations on all links and buttons.
+- **Modern Fonts:** Poppins for headings, Inter for body text.
+- **Animated UI:** Framer Motion powers smooth, energetic animations on all main pages.
+- **Responsive Design:** Fully mobile-friendly and accessible.
+- **Events & Past Events:** View upcoming and past events, with vibrant cards and images.
+- **About Page:** Redesigned with bold images, motion, and a Bollywood party vibe.
+- **Contact Page:** Contact form (Contentful-powered), animated social icons, and details.
+- **Social Links:** Instagram and Facebook icons in footer and contact page.
+- **No Blog:** The Blog page and navigation link have been removed.
+- **Admin Page:** `/admin` route for viewing submitted contact form entries (see below).
+
+## Admin Page
+
+- **URL:** `/admin`
+- **Login:**
+  - Username: `admin`
+  - Password: `Admin1!`
+- **Function:** View all contact form submissions (requires Contentful setup).
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+3. **Environment Variables:**
+   - Set up Contentful environment variables in `.env.local` for contact form and admin page.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Customization
+- **Colors:** Edit `tailwind.config.js` and `globals.css` for brand color changes.
+- **Fonts:** Google Fonts CDN in `layout.js`.
+- **Events Data:** Update `src/data/pastEventsData.js` for past events.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Credits
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lucide Icons](https://lucide.dev/)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For any issues or feature requests, please open an issue or contact the maintainer.
