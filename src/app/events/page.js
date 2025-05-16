@@ -92,7 +92,7 @@ export default function EventsPage() {
           >
             {upcomingEvents.map((event) => (
               <motion.div key={event.id} variants={cardVariants}>
-                <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-white border-primary">
+                <Card className="overflow-hidden p-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-white border-primary">
                   <CardHeader className="p-0">
                     <div className="relative h-60 w-full">
                       <Image
