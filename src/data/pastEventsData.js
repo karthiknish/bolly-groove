@@ -6,6 +6,22 @@ function parseDate(dateStr) {
 
 export const pastEventsData = [
   {
+    id: 219,
+    title: `Balam Pichkari Pre-Holi 2024 Bollywood Boat Party`,
+    venue: `London Thames Boat (see Eventbrite for details)`,
+    date: `02/03/2024`,
+    imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F704885029%2F1818146595273%2F1%2Foriginal.20240225-204959?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C150%2C1586%2C793&s=4abb7ae3a631cc5bc7d5952d4aef2028`,
+    description: `A colourful Bollywood boat party on the Thames to kick off Holi 2024 celebrations with music and dance.`,
+  },
+  {
+    id: 218,
+    title: `Pre Christmas Bollywood Boat Party 2023`,
+    venue: `London Thames Boat (see Eventbrite for details)`,
+    date: `16/12/2023`,
+    imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F647159899%2F1818146595273%2F1%2Foriginal.20231123-115527?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C275%2C1414%2C707&s=a2c1af6947f113505174287302a40aec`,
+    description: `A festive Bollywood boat party on the Thames to celebrate the Christmas season in 2023.`,
+  },
+  {
     id: 217,
     title: `Diwali Bollywood Boat Party 2023`,
     venue: `London Thames Boat (see Eventbrite for details)`,

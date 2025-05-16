@@ -42,7 +42,7 @@ export default function Header() {
               alt="BollyGroove Logo"
               width={120}
               height={40}
-              style={{ maxHeight: 48, width: "auto" }}
+              style={{ maxHeight: 100, width: "auto" }}
               priority
             />
           </Link>

@@ -26,6 +26,18 @@ const nextConfig = {
         protocol: "https",
         hostname: "londonboatparty.co.uk",
       },
+      {
+        protocol: "https",
+        hostname: "shaadiwish.com",
+      },
+      {
+        protocol: "https",
+        hostname: "static.standard.co.uk",
+      },
+      {
+        protocol: "https",
+        hostname: "experitour.com",
+      },
     ],
   },
 };

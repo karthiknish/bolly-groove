@@ -57,29 +57,70 @@ export default function AboutPage() {
 
         {/* Main Content Section with image and text */}
         <motion.section
-          className="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 items-center"
+          className="container mx-auto px-4 py-16 flex flex-col md:flex-row gap-12 items-center md:items-start"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeInUp}
         >
-          {/* Left: Image */}
-          <motion.div
-            className="w-full h-72 md:h-[400px] relative rounded-xl overflow-hidden shadow-lg"
-            variants={fadeInUp}
-          >
-            <Image
-              src="https://static.designmynight.com/uploads/2024/01/London-Ki-Holi-2024-1.png"
-              alt="London Ki Holi Event"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl"
-              priority={false}
-            />
-          </motion.div>
+          {/* Left: Images */}
+          <div className="flex flex-col gap-8 w-full md:w-1/2">
+            <motion.div
+              className="w-full h-72 md:h-[200px] relative rounded-xl overflow-hidden shadow-lg"
+              variants={fadeInUp}
+            >
+              <Image
+                src="https://static.designmynight.com/uploads/2024/01/London-Ki-Holi-2024-1.png"
+                alt="London Ki Holi Event"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+                priority={false}
+              />
+            </motion.div>
+            <motion.div
+              className="w-full h-72 md:h-[200px] relative rounded-xl overflow-hidden shadow-lg"
+              variants={fadeInUp}
+            >
+              <Image
+                src="https://shaadiwish.com/blog/wp-content/uploads/2021/04/qawali-night.jpg"
+                alt="London Qawali Night"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+                priority={false}
+              />
+            </motion.div>
+            <motion.div
+              className="w-full h-72 md:h-[200px] relative rounded-xl overflow-hidden shadow-lg"
+              variants={fadeInUp}
+            >
+              <Image
+                src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/02/14/14/koko-1402.jpg?crop=8:5,smart&quality=75&auto=webp&width=960"
+                alt="Bollywood Dance Map"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+                priority={false}
+              />
+            </motion.div>
+            <motion.div
+              className="w-full h-72 md:h-[200px] relative rounded-xl overflow-hidden shadow-lg"
+              variants={fadeInUp}
+            >
+              <Image
+                src="https://experitour.com/wp-content/uploads/2018/02/CAJk3oNWsAA3ixq.jpg"
+                alt="Bollywood Party"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+                priority={false}
+              />
+            </motion.div>
+          </div>
           {/* Right: About Content */}
           <motion.div
-            className="space-y-6 text-lg text-gray-800"
+            className="space-y-6 text-lg text-gray-800 w-full md:w-1/2"
             variants={fadeInUp}
           >
             <p>
@@ -172,29 +213,6 @@ export default function AboutPage() {
             <Image
               src="https://londonboatparty.co.uk/wp-content/uploads/2020/04/make-1st-image.jpg"
               alt="Pearl of London Event"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl"
-              priority={false}
-            />
-          </motion.div>
-        </motion.section>
-
-        {/* Fourth Visual Section with new image */}
-        <motion.section
-          className="container mx-auto px-4 pb-20"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={fadeInUp}
-        >
-          <motion.div
-            className="w-full h-64 md:h-96 relative rounded-xl overflow-hidden shadow-2xl mx-auto"
-            variants={fadeInUp}
-          >
-            <Image
-              src="https://cdn-az.allevents.in/events4/banners/68eeecfa7dfc584bae8ef5b205f2cd948e37ba43c43176503248fea43d751f29-rimg-w1200-h678-dc171415-gmir?v=1747123708"
-              alt="BollyGroove Event Banner"
               layout="fill"
               objectFit="cover"
               className="rounded-xl"
