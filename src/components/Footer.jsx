@@ -36,14 +36,7 @@ export default function Footer() {
                 About Us
               </Link>
             </li>
-            <li>
-              <Link
-                href="/blog"
-                className="text-secondary hover:text-secondary/80 hover:scale-110 transition-all duration-200 font-heading"
-              >
-                Blog
-              </Link>
-            </li>
+
             <li>
               <Link
                 href="/contact"
