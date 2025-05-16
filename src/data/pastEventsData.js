@@ -6,6 +6,14 @@ function parseDate(dateStr) {
 
 export const pastEventsData = [
   {
+    id: 217,
+    title: `Diwali Bollywood Boat Party 2023`,
+    venue: `London Thames Boat (see Eventbrite for details)`,
+    date: `11/11/2023`,
+    imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F629098529%2F1818146595273%2F1%2Foriginal.20231026-142354?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C509%2C1200%2C600&s=7cc923d02c50efb84a3c37797fc55f87`,
+    description: `A sparkling Bollywood boat party on the Thames to celebrate Diwali 2023 with music and dance.`,
+  },
+  {
     id: 216,
     title: `Pre Diwali Bollywood Boat Party 2023`,
     venue: `London Thames Boat (see Eventbrite for details)`,

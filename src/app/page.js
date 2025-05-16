@@ -188,8 +188,8 @@ export default function HomePage() {
                 Seasonal Events
               </h3>
               <p className="text-gray-700 text-center">
-                Celebrate Holi, Diwali, New Year's, and more with our vibrant,
-                themed Bollywood events.
+                Celebrate Holi, Diwali, New Year&apos;s, and more with our
+                vibrant, themed Bollywood events.
               </p>
             </motion.div>
             <motion.div
@@ -385,7 +385,7 @@ function TestimonialCarousel() {
         transition={{ duration: 0.5 }}
       >
         <p className="text-xl italic text-gray-800 mb-6">
-          "{testimonials[index].quote}"
+          &quot;{testimonials[index].quote}&quot;
         </p>
         <div className="flex flex-col items-center">
           <span className="font-bold accent-primary text-lg">

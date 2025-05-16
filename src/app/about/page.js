@@ -93,7 +93,7 @@ export default function AboutPage() {
             <p>
               Founded with a love for Indian cinema and music, BollyGroove
               specialises in creating fun-fuelled, colourful Bollywood parties
-              and events for all occasions. Whether it's a high-energy club
+              and events for all occasions. Whether it&apos;s a high-energy club
               night, a themed corporate event, a unique boat party, or a festive
               seasonal celebration, we pour our hearts into making every event
               special.
@@ -130,7 +130,7 @@ export default function AboutPage() {
               </li>
               <li className="flex items-center gap-3">
                 <Sun className="w-6 h-6 text-primary" />
-                Seasonal Events (Holi, Diwali, New Year's)
+                Seasonal Events (Holi, Diwali, New Year&apos;s)
               </li>
               <li className="flex items-center gap-3">
                 <Users className="w-6 h-6 text-primary" />
