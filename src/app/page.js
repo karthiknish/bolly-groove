@@ -90,17 +90,27 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section - Can also add motion here if desired */}
-      <section className="relative h-[calc(100vh-80px)] min-h-[500px] bg-primary text-primary-foreground flex items-center justify-center">
-        <Image
-          src="https://d.ibtimes.co.uk/en/full/1496730/holi-india.jpg"
-          alt="Bollywood Party"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-30"
-          priority // Added priority for LCP
+      <section className="relative h-[calc(100vh-80px)] min-h-[500px] bg-primary text-primary-foreground flex items-center justify-center overflow-hidden">
+        {/* Video Background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
+          src="/bolly-dance.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/logo.png"
         />
+        {/* Dark overlay for contrast */}
+        <div className="absolute inset-0 bg-black/30 z-0" />
+        {/* Overlay for color vibrancy */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/60 z-0" />
+        {/* Animated decorative shapes */}
+
+        {/* Bottom right squiggle */}
+
         <motion.div
-          className="relative z-10 text-center p-8"
+          className="relative z-20 text-center p-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -145,7 +155,7 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.2 }}
         variants={sectionVariants}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative z-10">
           <motion.h2
             className="text-4xl accent-primary text-center mb-12 font-bold"
             variants={sectionVariants}
@@ -154,8 +164,8 @@ export default function HomePage() {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
-              className="flex flex-col items-center bg-secondary/40 rounded-xl p-8 shadow-md hover:scale-105 transition-transform duration-200 border border-secondary"
-              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center bg-[#F3E8FF] rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-200 border-2 border-secondary rotate-[-2deg]"
+              whileHover={{ scale: 1.07, rotate: -1 }}
             >
               <Music className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold accent-primary mb-2">
@@ -167,8 +177,8 @@ export default function HomePage() {
               </p>
             </motion.div>
             <motion.div
-              className="flex flex-col items-center bg-secondary/40 rounded-xl p-8 shadow-md hover:scale-105 transition-transform duration-200 border border-secondary"
-              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center bg-[#FFF7E0] rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-200 border-2 border-secondary rotate-[2deg]"
+              whileHover={{ scale: 1.07, rotate: 1 }}
             >
               <Ship className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold accent-primary mb-2">
@@ -180,8 +190,8 @@ export default function HomePage() {
               </p>
             </motion.div>
             <motion.div
-              className="flex flex-col items-center bg-secondary/40 rounded-xl p-8 shadow-md hover:scale-105 transition-transform duration-200 border border-secondary"
-              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center bg-[#E0FFF7] rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-200 border-2 border-secondary rotate-[-1deg]"
+              whileHover={{ scale: 1.07, rotate: 0 }}
             >
               <Sun className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold accent-primary mb-2">
@@ -193,8 +203,8 @@ export default function HomePage() {
               </p>
             </motion.div>
             <motion.div
-              className="flex flex-col items-center bg-secondary/40 rounded-xl p-8 shadow-md hover:scale-105 transition-transform duration-200 border border-secondary"
-              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center bg-[#FFE0F7] rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-200 border-2 border-secondary rotate-[1deg]"
+              whileHover={{ scale: 1.07, rotate: 2 }}
             >
               <Mic2 className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-bold accent-primary mb-2">
@@ -302,11 +312,11 @@ export default function HomePage() {
               alt="About BollyGroove"
               width={768}
               height={432}
-              className="rounded-xl shadow-lg w-full h-auto object-cover"
+              className="shadow-lg w-full h-auto object-cover [clip-path:polygon(60px_0,100%_0,100%_calc(100%-60px),calc(100%-60px)_100%,0_100%,0_60px)]"
             />
           </div>
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl font-bold text-primary mb-6">
+            <h2 className="text-4xl font-bold text-black mb-6">
               About BollyGroove
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mb-8">
@@ -326,6 +336,52 @@ export default function HomePage() {
             >
               <Link href="/about">Read More About Us</Link>
             </Button>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Gallery Section */}
+      <motion.section
+        className="py-20 bg-gradient-to-br from-primary/10 via-secondary/20 to-white"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl text-primary font-bold text-center mb-4">
+            Gallery
+          </h2>
+          <p className="text-xl md:text-2xl text-primary font-semibold text-center mb-10">
+            A glimpse into our vibrant events and unforgettable moments.
+          </p>
+          {/* Responsive horizontal scroll on mobile, masonry grid on desktop */}
+          <div className="flex md:grid md:grid-cols-5 gap-6 md:gap-8 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x md:snap-none">
+            {[
+              "/photo-1.jpg",
+              "/photo-2.jpg",
+              "/photo-3.jpg",
+              "/photo-4.jpg",
+              "/photo-5.jpg",
+            ].map((src, i) => (
+              <motion.div
+                key={src}
+                whileHover={{ scale: 1.08, rotate: i % 2 === 0 ? 2 : -2 }}
+                className={`min-w-[70vw] md:min-w-0 md:w-full h-56 md:h-72 overflow-hidden rounded-[2.5rem] border-4 border-secondary shadow-xl bg-white snap-center transition-all duration-300 ${
+                  i % 2 === 0 ? "md:mt-0" : "md:mt-8"
+                }`}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <img
+                  src={src}
+                  alt={`BollyGroove event ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.section>

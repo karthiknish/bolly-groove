@@ -32,10 +32,10 @@ A modern, vibrant Bollywood events website built with Next.js, Tailwind CSS, sha
    yarn install
    ```
 2. **Run the development server:**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
+```bash
+npm run dev
+# or
+yarn dev
    ```
 3. **Environment Variables:**
    - Set up Contentful environment variables in `.env.local` for contact form and admin page.

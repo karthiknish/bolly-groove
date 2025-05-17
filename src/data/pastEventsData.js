@@ -170,3 +170,4 @@ export const pastEventsData = [
       "An unforgettable evening celebrating the soulful tradition of Qawwali in Liverpool. Sales for this event have ended.",
   },
 ].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+ 
