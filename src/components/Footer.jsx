@@ -62,6 +62,22 @@ export default function Footer() {
           <p className="text-sm">London, UK</p>
           <p className="text-sm">
             <a
+              href="tel:07769406432"
+              className="text-secondary hover:text-secondary/80 hover:scale-110 transition-all duration-200 font-heading"
+            >
+              07769 406432
+            </a>
+          </p>
+          <p className="text-sm">
+            <a
+              href="tel:07380856052"
+              className="text-secondary hover:text-secondary/80 hover:scale-110 transition-all duration-200 font-heading"
+            >
+              07380 856052
+            </a>
+          </p>
+          <p className="text-sm">
+            <a
               href="mailto:support@bollygroove.co.uk"
               className="text-secondary hover:text-secondary/80 hover:scale-110 transition-all duration-200 font-heading"
             >
