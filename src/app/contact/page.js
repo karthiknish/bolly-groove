@@ -195,12 +195,11 @@ export default function ContactPage() {
               <p>
                 <span className="font-semibold">Email:</span>{" "}
                 <a
-                  href="mailto:bollygroove.events.productions@gmail.com"
+                  href="mailto:support@bollygroove.co.uk"
                   className="text-primary hover:underline"
                 >
-                  bollygroove.events.productions@gmail.com
-                </a>{" "}
-                (Update if different)
+                  support@bollygroove.co.uk
+                </a>
               </p>
               <p>
                 <span className="font-semibold">Location:</span> Feltham,

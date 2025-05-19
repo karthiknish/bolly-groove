@@ -62,18 +62,10 @@ export default function Footer() {
           <p className="text-sm">London, UK</p>
           <p className="text-sm">
             <a
-              href="tel:01234567890"
+              href="mailto:support@bollygroove.co.uk"
               className="text-secondary hover:text-secondary/80 hover:scale-110 transition-all duration-200 font-heading"
             >
-              01234 567 890
-            </a>
-          </p>
-          <p className="text-sm">
-            <a
-              href="mailto:bollygroove.events.productions@gmail.com"
-              className="text-secondary hover:text-secondary/80 hover:scale-110 transition-all duration-200 font-heading"
-            >
-              bollygroove.events.productions@gmail.com
+              support@bollygroove.co.uk
             </a>
           </p>
           <div className="flex space-x-4 mt-4">
