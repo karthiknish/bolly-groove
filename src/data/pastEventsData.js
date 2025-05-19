@@ -6,21 +6,75 @@ function parseDate(dateStr) {
 
 export const pastEventsData = [
   {
+    id: 223,
+    title: "DESI VIDESI",
+    venue: "London",
+    date: "13/01/2024",
+    imageUrl:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F670990069%2F1818146595273%2F1%2Foriginal.20240109-205602?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C57%2C1034%2C517&s=77e28190631e92b3903e5e51d83db994",
+    description:
+      "Party like there's no tomorrow at DESI VIDESI - a night filled with desi beats and energetic dance moves!",
+  },
+  {
+    id: 225,
+    title: "BALAM PICHKARI HOLI 2024 | RANG BARSE IN FELTHAM OUTDOOR FEST",
+    venue: "Feltham",
+    date: "24/03/2024",
+    imageUrl:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F704863629%2F1818146595273%2F1%2Foriginal.20240225-195731?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C5%2C1586%2C793&s=084cace849c10c2f86f083c54198708d",
+    description:
+      "A fun-packed, outdoor Holi colour party in Feltham. Enjoy organic colour play, live Bollywood DJ sets, dhol players and Indian street food.",
+  },
+
+  {
+    id: 224,
+    title: "DESI SATURDAY BOLLYWOOD VS BHANGRA NIGHT",
+    venue: "Hounslow",
+    date: "24/02/2024",
+    imageUrl:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F690511729%2F1818146595273%2F1%2Foriginal.20240205-212245?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C157%2C1080%2C540&s=58c96dae2f74255ca85731dc40a54c0d",
+    description:
+      "Party like there's no tomorrow at DESI SATURDAY (BOLLYWOOD) - a night filled with desi beats and energetic dance moves!",
+  },
+
+  {
     id: 219,
     title: `Balam Pichkari Pre-Holi 2024 Bollywood Boat Party`,
     venue: `London Thames Boat`,
-    date: `02/03/2024`,
+    date: `23/03/2024`,
     imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F704885029%2F1818146595273%2F1%2Foriginal.20240225-204959?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C150%2C1586%2C793&s=4abb7ae3a631cc5bc7d5952d4aef2028`,
     description: `A colourful Bollywood boat party on the Thames to kick off Holi 2024 celebrations with music and dance.`,
   },
   {
+    id: 227,
+    title: "Pre-Christmas Bollywood Boat Party 2023",
+    venue: "Kingston Turks Pier",
+    date: "16/12/2023",
+    imageUrl:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F647159899%2F1818146595273%2F1%2Foriginal.20231123-115527?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C275%2C1414%2C707&s=a2c1af6947f113505174287302a40aec",
+    description:
+      "We are having yet another PRE-CHRISTMAS BOLLYWOOD BOAT PARTY on Saturday 16th December 2023 at 7.30pm at Kingston Turks Pier.",
+  },
+
+  {
     id: 218,
     title: `Pre Christmas Bollywood Boat Party 2023`,
     venue: `London Thames Boat`,
-    date: `16/12/2023`,
+    date: `23/12/2023`,
     imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F647159899%2F1818146595273%2F1%2Foriginal.20231123-115527?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C275%2C1414%2C707&s=a2c1af6947f113505174287302a40aec`,
     description: `A festive Bollywood boat party on the Thames to celebrate the Christmas season in 2023.`,
   },
+  {
+    id: 226,
+    title: "Pre-Christmas Bollywood Boat Party 2023",
+    venue: "Westminster Millennium Pier, London",
+    date: "22/12/2023",
+    imageUrl:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F647163379%2F1818146595273%2F1%2Foriginal.20231123-120323?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C210%2C1414%2C707&s=639ec3cb7a4d55d52c8883d79361c77d",
+    description:
+      "We are having yet another PRE-CHRISTMAS BOLLYWOOD BOAT PARTY on Friday 22nd December 2023 at 7.30pm at Westminster Millennium Pier.",
+  },
+
   {
     id: 217,
     title: `Diwali Bollywood Boat Party 2023`,
@@ -33,7 +87,7 @@ export const pastEventsData = [
     id: 216,
     title: `Pre Diwali Bollywood Boat Party 2023`,
     venue: `London Thames Boat`,
-    date: `28/10/2023`,
+    date: `11/11/2023`,
     imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F614210119%2F1818146595273%2F1%2Foriginal.20231005-191959?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C162%2C3916%2C1958&s=2977e0d83968cc8feb705d8416370061`,
     description: `A festive Bollywood boat party on the Thames to celebrate the spirit of Diwali in 2023.`,
   },
@@ -49,7 +103,7 @@ export const pastEventsData = [
     id: 213,
     title: `2024 New Years Eve Bollywood Party`,
     venue: `London`,
-    date: `31/12/2024`,
+    date: `31/12/2023`,
     imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F663673049%2F1818146595273%2F1%2Foriginal.20231227-143757?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C13%2C1130%2C565&s=9008c26ab41b9cfa0a2109df7273fb6b`,
     description: `A spectacular Bollywood party to welcome the new year 2025 in style.`,
   },
@@ -57,7 +111,7 @@ export const pastEventsData = [
     id: 212,
     title: `Hounslow Mela 2024 – Londons Biggest South Asian Outdoor Music Festival`,
     venue: `Cranford Community College, Hounslow`,
-    date: `15/06/2024`, // Plausible date for summer mela
+    date: `22/06/2024`, // Plausible date for summer mela
     imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F742169339%2F1818146595273%2F1%2Foriginal.20240412-145142?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1600%2C800&s=36ad8ea55181c98baf53acc217bb1214`,
     description: `A vibrant outdoor festival celebrating South Asian music and culture in Hounslow.`,
   },
@@ -73,9 +127,22 @@ export const pastEventsData = [
     id: 210,
     title: `Bollywood Folk Pop Fusion Maham Suhail and Anurag Kumar Live in Concert`,
     venue: `London Concert Venue`,
-    date: `05/07/2024`, // Plausible event date
+    date: `24/08/2024`, // Plausible event date
     imageUrl: `https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F802171879%2F1818146595273%2F1%2Foriginal.20240705-112908?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1130%2C565&s=d9e1bb1b5784aa2d15cf08856783d2cc`,
     description: `A unique evening of Bollywood folk and pop fusion with Maham Suhail and Anurag Kumar live in concert.`,
+  },
+  // Updated event as per instructions
+  {
+    id: 222,
+    title: "Qawwali Night with Ashaz Hussain Qawwali Group Live in Concert",
+    venue: "Ferdowsi Banquet Hall, Feltham",
+    date: "27/07/2024", // Saturday, July 27, 2024
+    imageUrl:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F804333919%2F1818146595273%2F1%2Foriginal.20240709-135651?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C235%2C1414%2C707&s=ec842bef8a042f2abeb25f86bc08d17e",
+    eventUrl:
+      "https://www.eventbrite.co.uk/e/qawwali-night-with-ashaz-hussain-qawwali-group-live-in-concert-tickets-925442552587?aff=ebdsoporgprofile",
+    description:
+      "We are having a QAWWALI NIGHT on Saturday 27th July 2024 at 6pm at Ferdowsi Banquet Hall in Feltham. Join us for a wonderful evening.",
   },
   {
     id: 209,
@@ -88,8 +155,8 @@ export const pastEventsData = [
   {
     id: 208,
     title: "Desi Saturday Bollywood vs Bhangra Night",
-    venue: "(Venue details as per original event)",
-    date: "10/02/2024", // Plausible event date
+    venue: "London",
+    date: "02/03/2024", // Plausible event date
     imageUrl:
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F690511729%2F1818146595273%2F1%2Foriginal.20240205-212245?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C157%2C1080%2C540&s=58c96dae2f74255ca85731dc40a54c0d",
     description:
@@ -99,8 +166,8 @@ export const pastEventsData = [
     id: 207,
     title:
       "Ghazal Night with Shad Ghulam Ali & Gulfam Sabri Live in Concert in Feltham",
-    venue: "Feltham (Venue details as per original event)",
-    date: "06/08/2024", // Plausible event date from image timestamp
+    venue: "Feltham ",
+    date: "30/08/2024",
     imageUrl:
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F821898069%2F1818146595273%2F1%2Foriginal.20240806-223202?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C283%2C904%2C452&s=4b5c43c7a178704c18131e428feac78c",
     description:
@@ -120,11 +187,23 @@ export const pastEventsData = [
       "A mesmerizing Qawwali night with the Khan Brothers Qawwali Group live in concert in Feltham.",
   },
   {
+    id: 222,
+    title:
+      "Qawwali Night with Khan Brothers Qawwali Group Live in Concert in Feltham",
+    venue: "Ferdowsi Banquet Hall, Feltham",
+    date: "07/09/2024", // Saturday, September 7, 2024
+    imageUrl:
+      "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F818850089%2F1818146595273%2F1%2Foriginal.20240801-175916?w=940&auto=format%2Ccompress&q=75&sharp=10&s=ca2814441bddb8e8b41f16f4edc447d7",
+    description:
+      "We are having a QAWWALI NIGHT on Saturday 7th September 2024 at 6pm at Ferdowsi Banquet Hall in Feltham. Join us for a wonderful evening.",
+  },
+
+  {
     id: 206,
     title:
       "Qawwali Night with Parminder Singh Lakhanpal & Satwinder Singh in Concert",
     venue: "(Venue details as per original event)",
-    date: "24/08/2024", // Plausible event date from image timestamp
+    date: "14/09/2024", // Plausible event date from image timestamp
     imageUrl:
       "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F833648589%2F1818146595273%2F1%2Foriginal.20240824-194204?w=940&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C344%2C1414%2C707&s=3520e407a0f87bf50159923bafda5780",
     description:
@@ -161,7 +240,6 @@ export const pastEventsData = [
     description:
       "A vibrant outdoor Holi festival in Feltham, featuring music, colors, and celebration. Sales for this event have ended.",
   },
-  // Added event as per instructions
   {
     id: 220,
     title: "BALAM PICHKARI HOLI 2025 | RANG BARSE IN HOUNSLOW OUTDOOR FEST",
