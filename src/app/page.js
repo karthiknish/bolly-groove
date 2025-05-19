@@ -18,6 +18,7 @@ import {
   Ship,
   Sun,
   Mic2,
+  PartyPopper,
 } from "lucide-react";
 
 // Placeholder data - this would typically come from an API or CMS
@@ -90,24 +91,59 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section - Can also add motion here if desired */}
-      <section className="relative h-[calc(100vh-80px)] min-h-[500px] bg-primary text-primary-foreground flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
+      <section
+        className="relative h-[calc(100vh-80px)] min-h-[600px] bg-primary text-primary-foreground flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 10px)",
+        }}
+      >
+        {/* Large Background Video (insta-video.mp4) */}
         <video
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
-          src="/bolly-dance.mp4"
+          className="absolute inset-0 w-full h-full object-cover opacity-75"
+          src="/insta-video.mp4"
           autoPlay
           loop
           muted
           playsInline
           poster="/logo.png"
         />
-        {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/30 z-0" />
-        {/* Overlay for color vibrancy */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/60 z-0" />
-        {/* Animated decorative shapes */}
 
-        {/* Bottom right squiggle */}
+        {/* Insta Videos Background (3-video collage) */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden z-10">
+          {/* Video 1 (Left-ish, slightly rotated) */}
+          <video
+            className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[70%] object-cover opacity-85 transform -rotate-3 shadow-2xl border-2 border-secondary/50 rounded-lg"
+            src="/insta-video-3.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/logo.png"
+          />
+          {/* Video 2 (Center, more prominent) */}
+          <video
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35%] h-[80%] object-cover opacity-95 shadow-2xl border-2 border-secondary rounded-lg z-10"
+            src="/insta-video-4.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/logo.png"
+          />
+          {/* Video 3 (Right-ish, slightly rotated) */}
+          <video
+            className="absolute top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2 w-[30%] h-[70%] object-cover opacity-85 transform rotate-3 shadow-2xl border-2 border-secondary/50 rounded-lg"
+            src="/insta-video-2.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/logo.png"
+          />
+        </div>
+
+        {/* Overlays removed as per request */}
 
         <motion.div
           className="relative z-20 text-center p-8"
@@ -162,7 +198,7 @@ export default function HomePage() {
           >
             Event Types We Host
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             <motion.div
               className="flex flex-col items-center bg-[#F3E8FF] rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-200 border-2 border-secondary rotate-[-2deg]"
               whileHover={{ scale: 1.07, rotate: -1 }}
@@ -215,6 +251,19 @@ export default function HomePage() {
                 immersive cultural experiences.
               </p>
             </motion.div>
+            <motion.div
+              className="flex flex-col items-center bg-[#E8F5E9] rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-200 border-2 border-secondary rotate-[-1.5deg]"
+              whileHover={{ scale: 1.07, rotate: -0.5 }}
+            >
+              <PartyPopper className="w-12 h-12 text-primary mb-4" />
+              <h3 className="text-xl font-bold accent-primary mb-2">
+                Festivals & Melas
+              </h3>
+              <p className="text-gray-700 text-center">
+                Grand celebrations of cultural festivals and community melas,
+                full of music, dance, food, and fun for all ages.
+              </p>
+            </motion.div>
           </div>
         </div>
       </motion.section>
@@ -222,6 +271,10 @@ export default function HomePage() {
       {/* Upcoming Events Section */}
       <motion.section
         className="py-16 bg-secondary"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px, transparent 2px, transparent 10px)",
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
@@ -297,45 +350,78 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      {/* About Us Snippet Section */}
+      {/* About Us Snippet Section - Updated */}
       <motion.section
         className="py-16"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }} // Adjusted amount due to potentially taller section
         variants={sectionVariants}
       >
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-          <div className="w-full md:w-1/2 mb-8 md:mb-0">
-            <Image
-              src="https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI1LzUvMTMvNy80Ny8xNC82MTIvSU1HXzAxNTIuanBlZyJdXQ?w=768&h=432&fit=fillmax&fill=blur&auto=format%2Ccompress"
-              alt="About BollyGroove"
-              width={768}
-              height={432}
-              className="shadow-lg w-full h-auto object-cover [clip-path:polygon(60px_0,100%_0,100%_calc(100%-60px),calc(100%-60px)_100%,0_100%,0_60px)]"
-            />
+        <div className="container mx-auto px-4">
+          {/* Part 1: General Intro with Image */}
+          <div className="flex flex-col md:flex-row items-center gap-10 mb-12 md:mb-16">
+            <div className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center">
+              <Image
+                src="/photo-about.jpg"
+                alt="A vibrant BollyGroove event mela"
+                width={700}
+                height={475}
+                className="shadow-lg w-full max-w-md h-auto object-cover rounded-lg [clip-path:polygon(0_0,calc(100%-50px)_0,100%_50px,100%_100%,50px_100%,0_calc(100%-50px))]"
+              />
+            </div>
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              <h2 className="text-4xl font-bold text-primary mb-6">
+                About BollyGroove
+              </h2>
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+                BollyGroove specialises in creating fun-fuelled, colourful
+                Bollywood parties and events. We bring the vibrant energy,
+                dazzling colors, and infectious rhythms of Bollywood to life,
+                ensuring every occasion is unique and unforgettable.
+              </p>
+              <p className="text-lg text-gray-700 dark:text-gray-300">
+                No event is too big or small for us—let us help you dance your
+                desi way out!
+              </p>
+            </div>
           </div>
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-4xl font-bold text-black mb-6">
-              About BollyGroove
-            </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mb-8">
-              BollyGroove specialises in creating fun-fuelled, colourful
-              Bollywood parties and events for all occasions, including
-              birthdays, corporate events, weddings, and private celebrations.
-              Our team brings the vibrant energy, dazzling colors, and
-              infectious rhythms of Bollywood to life, ensuring every event is
-              unique and unforgettable. No occasion is too big or small for
-              us—let us help you dance your desi way out!
-            </p>
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="border-primary text-primary hover:border-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              <Link href="/about">Read More About Us</Link>
-            </Button>
+
+          {/* Part 2: Explaining Further About Events */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+            <div className="w-full md:w-1/2 text-left">
+              <h3 className="text-3xl font-bold text-primary mb-4">
+                Crafting Unforgettable Experiences
+              </h3>
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+                We create vibrant Bollywood events—club nights, boat parties,
+                festivals, and private celebrations—filled with music, colour,
+                and unforgettable energy.
+              </p>
+              <ul className="list-disc pl-5 space-y-2 text-base text-gray-700 dark:text-gray-300 mb-6">
+                <li>Club Nights & Boat Parties</li>
+                <li>Festivals & Melas</li>
+                <li>Qawwali, Sufi & Seasonal Events</li>
+                <li>Private & Corporate Parties</li>
+              </ul>
+              <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="border-primary text-primary hover:border-primary hover:bg-primary hover:text-primary-foreground"
+              >
+                <Link href="/about">Learn More</Link>
+              </Button>
+            </div>
+            <div className="w-full md:w-1/2 flex justify-center">
+              <Image
+                src="https://fatsoma.imgix.net/W1siZiIsInB1YmxpYy8yMDI1LzUvMTMvNy80Ny8xNC82MTIvSU1HXzAxNTIuanBlZyJdXQ?w=768&h=432&fit=fillmax&fill=blur&auto=format%2Ccompress"
+                alt="BollyGroove Event Atmosphere"
+                width={700}
+                height={475}
+                className="shadow-lg w-full max-w-md h-auto object-cover rounded-lg [clip-path:polygon(0_0,calc(100%-50px)_0,100%_50px,100%_100%,50px_100%,0_calc(100%-50px))]"
+              />
+            </div>
           </div>
         </div>
       </motion.section>
@@ -349,9 +435,7 @@ export default function HomePage() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl text-primary font-bold text-center mb-4">
-            Gallery
-          </h2>
+          <h2 className="text-4xl font-bold text-center mb-4">Gallery</h2>
           <p className="text-xl md:text-2xl text-primary font-semibold text-center mb-10">
             A glimpse into our vibrant events and unforgettable moments.
           </p>
@@ -382,6 +466,56 @@ export default function HomePage() {
                 />
               </motion.div>
             ))}
+          </div>
+          {/* Centered Instagram Button */}
+          <div className="flex justify-center items-center mt-8">
+            <a
+              href="https://www.instagram.com/bolly_groove01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 text-white font-bold text-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-yellow-500 transition-all duration-200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <rect
+                  width="20"
+                  height="20"
+                  x="2"
+                  y="2"
+                  rx="6"
+                  fill="url(#ig-gradient)"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="5"
+                  stroke="white"
+                  strokeWidth="2"
+                  fill="none"
+                />
+                <circle cx="17" cy="7" r="1.5" fill="white" />
+                <defs>
+                  <linearGradient
+                    id="ig-gradient"
+                    x1="2"
+                    y1="2"
+                    x2="22"
+                    y2="22"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#f58529" />
+                    <stop offset="0.5" stopColor="#dd2a7b" />
+                    <stop offset="1" stopColor="#fdcB52" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Follow us on Instagram
+            </a>
           </div>
         </div>
       </motion.section>

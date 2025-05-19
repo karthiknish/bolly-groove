@@ -33,7 +33,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-primary/10 backdrop-blur-md shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-primary">
           <Link href="/">
@@ -109,7 +109,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-40"
+            className="md:hidden bg-primary/10 backdrop-blur-md shadow-lg absolute top-full left-0 right-0 z-40"
           >
             <nav className="flex flex-col items-center py-4 space-y-2">
               {navLinks.map((link, index) => (
