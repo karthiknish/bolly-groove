@@ -1,11 +1,14 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const ADMIN_USERNAME = `admin`;
 const ADMIN_PASSWORD = `Admin1!`;
 
 export default function AdminPage() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(
+    typeof window !== "undefined" &&
+      localStorage.getItem("adminLoggedIn") === "true"
+  );
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -13,16 +16,6 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
   const [selectedEntry, setSelectedEntry] = useState(null);
   const [showModal, setShowModal] = useState(false);
-
-  // Check localStorage for login state on mount
-  useEffect(() => {
-    if (
-      typeof window !== `undefined` &&
-      localStorage.getItem(`adminLoggedIn`) === `true`
-    ) {
-      setLoggedIn(true);
-    }
-  }, []);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -33,12 +26,11 @@ export default function AdminPage() {
       if (typeof window !== `undefined`) {
         localStorage.setItem(`adminLoggedIn`, `true`);
       }
-      // Fetch entries from Contentful (replace with real fetch)
       try {
         const res = await fetch(`/api/admin-entries`);
         if (!res.ok) throw new Error(`Failed to fetch entries`);
         const data = await res.json();
-        setEntries(data.entries || []);
+        setEntries(data.submissions || []);
       } catch (err) {
         setError(`Failed to load entries.`);
       }
@@ -57,6 +49,22 @@ export default function AdminPage() {
       localStorage.removeItem(`adminLoggedIn`);
     }
   };
+
+  // If logged in but entries are empty, fetch entries (simulate useEffect)
+  if (loggedIn && entries.length === 0 && !loading) {
+    (async () => {
+      setLoading(true);
+      try {
+        const res = await fetch(`/api/admin-entries`);
+        if (!res.ok) throw new Error(`Failed to fetch entries`);
+        const data = await res.json();
+        setEntries(data.submissions || []);
+      } catch (err) {
+        setError(`Failed to load entries.`);
+      }
+      setLoading(false);
+    })();
+  }
 
   if (!loggedIn) {
     return (
@@ -168,7 +176,9 @@ export default function AdminPage() {
                       <td className="px-3 py-2 border line-clamp-1 max-w-xs">
                         {entry.message}
                       </td>
-                      <td className="px-3 py-2 border">{entry.date}</td>
+                      <td className="px-3 py-2 border">
+                        {new Date(entry.submittedAt).toLocaleDateString()}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -209,7 +219,7 @@ export default function AdminPage() {
                 </div>
                 <div>
                   <span className="font-semibold">Date:</span>{" "}
-                  {selectedEntry.date}
+                  {new Date(selectedEntry.submittedAt).toLocaleDateString()}
                 </div>
               </div>
             </div>
