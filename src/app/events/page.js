@@ -94,12 +94,14 @@ export default function EventsPage() {
               <motion.div key={event.id} variants={cardVariants}>
                 <Card className="overflow-hidden p-0 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full bg-white border-primary">
                   <CardHeader className="p-0">
-                    <div className="relative h-60 w-full">
+                    <div className="relative w-full h-full min-h-[550px]">
                       <Image
                         src={event.imageUrl}
                         alt={event.title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        className="object-cover w-full h-full"
+                        sizes="(min-width: 1024px) 500px, 100vw"
+                        priority
                       />
                     </div>
                   </CardHeader>

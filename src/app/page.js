@@ -69,21 +69,21 @@ const testimonials = [
   },
   {
     quote:
-      "The attention to detail and the vibrant atmosphere at BollyGroove events is unmatched. Our corporate party was a huge success thanks to their amazing team!",
+      "The Diwali Boat Party was a magical experience! The lights, music, and festive vibes made it truly unforgettable. Thank you, BollyGroove, for an amazing night on the Thames.",
     name: "Amit P.",
-    event: "Corporate Client, 2023",
+    event: "Diwali Boat Party, 2023",
   },
   {
     quote:
-      "From the music to the decor, everything was perfect. My birthday party was unforgettable. Highly recommend BollyGroove for any celebration!",
+      "The Qawwali Night was a soulful and mesmerizing experience. The music and atmosphere transported us to another world. Thank you, BollyGroove, for an unforgettable evening!",
     name: "Sonal R.",
-    event: "Birthday Bash, 2023",
+    event: "Qawwali Night, 2023",
   },
   {
     quote:
       "We loved the Holi party! The colors, the food, and the performances were all top-notch. My kids are still talking about it!",
     name: "Ravi K.",
-    event: "Holi Family Event, 2024",
+    event: "Holi Event, 2024",
   },
 ];
 
@@ -296,14 +296,16 @@ export default function HomePage() {
           >
             {upcomingEvents.map((event) => (
               <motion.div key={event.id} variants={cardVariants}>
-                <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col bg-white border-primary">
+                <Card className="overflow-hidden shadow-lg py-0 hover:shadow-xl transition-shadow duration-300 h-full flex flex-col bg-white border-primary">
                   <CardHeader className="p-0">
-                    <div className="relative h-56 w-full">
+                    <div className="relative w-full h-full min-h-[550px]">
                       <Image
                         src={event.imageUrl}
                         alt={event.title}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        className="object-cover w-full h-full"
+                        sizes="(min-width: 1024px) 500px, 100vw"
+                        priority
                       />
                     </div>
                   </CardHeader>
