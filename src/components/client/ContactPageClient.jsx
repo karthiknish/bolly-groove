@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { submitContactForm } from "../../actions/submitContactForm"; // Adjusted path
+import { submitContactForm } from "@/app/actions/submitContactForm"; // Adjusted path
 import {
   Instagram,
   Facebook,
