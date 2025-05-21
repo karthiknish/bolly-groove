@@ -1,18 +1,46 @@
 export const metadata = {
   title: "Privacy Policy - BollyGroove",
-  description: "Read the Privacy Policy for BollyGroove.",
+  description:
+    "Understand how BollyGroove collects, uses, and protects your personal data. Our Privacy Policy outlines your rights and our commitment to your privacy.",
+  alternates: {
+    canonical: "/privacy",
+  },
+  openGraph: {
+    title: "BollyGroove Privacy Policy",
+    description:
+      "Read the official Privacy Policy for BollyGroove.co.uk. Learn about our data practices and your rights.",
+    images: [
+      {
+        url: "/og-image-privacy.jpg", // Replace with your actual privacy page OG image
+        width: 1200,
+        height: 630,
+        alt: "BollyGroove Privacy Policy",
+      },
+    ],
+  },
+  twitter: {
+    title: "BollyGroove Privacy Policy",
+    description:
+      "Read the official Privacy Policy for BollyGroove.co.uk. Learn about our data practices and your rights.",
+    images: ["/og-image-privacy.jpg"], // Replace with your actual privacy page OG image
+  },
+  robots: {
+    // Noindex for privacy policy as it's often boilerplate
+    index: false,
+    follow: true,
+  },
 };
 
 export default function PrivacyPage() {
   return (
     <>
-      <head>
+      {/* <head>
         <title>Privacy and Cookies | BollyGroove</title>
         <meta
           name="description"
           content="Read BollyGroove's privacy policy and cookie usage information."
         />
-      </head>
+      </head> */}
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center mb-8 text-primary">
           Privacy Policy

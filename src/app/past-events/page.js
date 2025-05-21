@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { pastEventsData } from "@/data/pastEventsData";
+
 function parseDate(dateStr) {
   // Expects DD/MM/YYYY
   const [day, month, year] = dateStr.split("/").map(Number);
@@ -44,16 +45,37 @@ const titleVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
+export const metadata = {
+  title: "Past Bollywood Events Archive - BollyGroove",
+  description:
+    "Explore BollyGroove's archive of memorable past Bollywood events, club nights, boat parties, and cultural celebrations. See what you've missed!",
+  alternates: {
+    canonical: "/past-events",
+  },
+  openGraph: {
+    title: "BollyGroove Past Events Archive",
+    description:
+      "Relive the excitement of BollyGroove's past Bollywood events. Browse our gallery of unforgettable nights.",
+    images: [
+      {
+        url: "/og-image-past-events.jpg", // Replace with your actual past events OG image
+        width: 1200,
+        height: 630,
+        alt: "BollyGroove Past Events",
+      },
+    ],
+  },
+  twitter: {
+    title: "BollyGroove Past Events Archive",
+    description:
+      "Relive the excitement of BollyGroove's past Bollywood events. Browse our gallery of unforgettable nights.",
+    images: ["/og-image-past-events.jpg"], // Replace with your actual past events OG image
+  },
+};
+
 export default function PastEventsPage() {
   return (
     <>
-      <head>
-        <title>Past Events | BollyGroove</title>
-        <meta
-          name="description"
-          content="Browse our gallery of past Bollywood events and parties hosted by BollyGroove."
-        />
-      </head>
       <div className="mx-auto px-4 py-12 bg-secondary">
         <motion.h1
           className="text-4xl accent-primary text-center mb-12"
